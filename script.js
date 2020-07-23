@@ -20,9 +20,7 @@ const fMinusBtn= document.getElementById('fMinusBtn');
     document.getElementById('total').innerText= subTotal+sumTax; 
 })
 
-
-
-    const sPlusBtn= document.getElementById('sPlusBtn');
+const sPlusBtn= document.getElementById('sPlusBtn');
     sPlusBtn.addEventListener('click', function(){
         value('secondValue',1);
         plusAmount('secondAmount', 59);
@@ -30,15 +28,8 @@ const fMinusBtn= document.getElementById('fMinusBtn');
         tax ('tax');
         var subTotal= innerToFloat ('subtotal');   
         var sumTax= innerToFloat('tax');
-        document.getElementById('total').innerText= subTotal+sumTax; 
-      
+        document.getElementById('total').innerText= subTotal+sumTax;      
     })
-
-
-
-
-
-
 
 const sMinusBtn= document.getElementById('sMinusBtn');
  sMinusBtn.addEventListener('click', function(){
@@ -51,15 +42,12 @@ const sMinusBtn= document.getElementById('sMinusBtn');
     document.getElementById('total').innerText= subTotal+sumTax; 
 })
 
-
-
 function value(id, plusOrMinus){
     const value= document.getElementById(id).value;
     const valueFloat= parseFloat(value);
     const newValue= valueFloat+plusOrMinus;
      document.getElementById(id).value=newValue;
 }
-
 
 function plusAmount(id,passAmount,){
     var amountFloat= innerToFloat(id);
